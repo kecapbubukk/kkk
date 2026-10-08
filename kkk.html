@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20261007-22-3e0c081","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo Black":"YACgEZulLoA,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Baloo 2":"YAHO2IcQUcM,0","Barlow Condensed":"YAFdJljEuFc,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Cinzel":"YACgEeV8bIQ,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Figtree":"YAHO2b-mV7A,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Fredoka":"YACgEZml080,0","Georgia":"YAGzXkO0pEM,0","Hanken Grotesk":"YAHO2VB9G0I,0","Helvetica":"YAFcf7zkXN0,0","IBM Plex Mono":"YAFdJkmvhGI,0","IBM Plex Sans":"YAFdJgT0SHI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Italiana":"YAHO2Toik_w,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Karla":"YAHO2V2NSXM,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Noto Sans JP":"YAFdJiHXlcI,0","Noto Sans KR":"YAGsojZj-RQ,0","Nunito Sans":"YAFdtQJYB9w,1","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Outfit":"YAHO2nVlg14,0","Pacifico":"YADLjORQ1u4,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAHO2gdhi18,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Sarabun":"YAFdJssSnME,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Space Mono":"YADW1-vpsoc,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/04bd24a6eff984f3.telemetry_sdk.js" integrity="sha512-eRq9fYej2+8V6hvjLvIA9VDqLjhyF3v1KErndwyn3RGyb/BlPbEAIvFJ9xZXdCl7+GJor4ZXTZMSkx8du4rfAg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Absensi Digital | SMAN 5 Tidore Kepulauan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0A1F44;
+      --navy-soft: #123369;
+      --paper: #f5f7fb;
+      --line: #dce3ef;
+      --ink: #15213a;
+      --muted: #6b7890;
+      --green: #16844b;
+      --yellow: #a66d00;
+      --orange: #c75b12;
+      --red: #c23343;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: "Work Sans", sans-serif; color: var(--ink); }
+    button, select, input, textarea { font: inherit; }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid #8cb6ff; outline-offset: 2px;
+    }
+    .screen { min-height: calc(100 * min(var(--vh, 1vh), 1vh)); }
+    .app-shell { min-height: calc(100 * min(var(--vh, 1vh), 1vh)); background: var(--paper); }
+    .sidebar { width: 248px; background: var(--navy); }
+    .nav-item { color: #b9c7df; transition: .18s ease; }
+    .nav-item:hover, .nav-item.active { background: rgba(255,255,255,.13); color: #fff; }
+    .nav-item.active { box-shadow: inset 3px 0 0 #fff; }
+    .card { background: #fff; border: 1px solid var(--line); box-shadow: 0 10px 25px rgba(10,31,68,.055); }
+    .stat-card { min-height: 125px; }
+    .badge { display:inline-flex; align-items:center; border-radius:999px; padding:.32rem .7rem; font-size:.76rem; font-weight:700; white-space:nowrap; }
+    .hadir { color: #0d6d3a; background: #dff6e9; }
+    .izin { color: #876000; background: #fff2c7; }
+    .sakit { color: #a7470d; background: #ffe2cc; }
+    .alpa { color: #a82435; background: #ffe0e5; }
+    .table-wrap { overflow-x:auto; }
+    table { min-width: 680px; width:100%; border-collapse:collapse; }
+    th { color: var(--muted); background:#f8fafc; font-size:.72rem; letter-spacing:.07em; text-transform:uppercase; }
+    th, td { padding:.85rem 1rem; text-align:left; border-bottom:1px solid #edf0f5; }
+    tr:last-child td { border-bottom:0; }
+    .toast { transform:translateY(125%); opacity:0; pointer-events:none; transition:.28s ease; }
+    .toast.show { transform:translateY(0); opacity:1; }
+    .view { display:none; }
+    .view.active { display:block; animation: rise .25s ease both; }
+    @keyframes rise { from {opacity:0; transform:translateY(8px)} to {opacity:1;transform:translateY(0)} }
+    .login-orb { background: radial-gradient(circle, rgba(54,112,204,.18), transparent 65%); }
+    .mobile-nav { display:none; }
+    @media(max-width: 767px) {
+      .sidebar { display:none; }
+      .mobile-nav { display:flex; }
+      .content-area { padding-bottom: 92px; }
+      .page-pad { padding: 1rem; }
+      .header-meta { align-items:flex-start; flex-direction:column; gap:.4rem; }
+      .hide-mobile { display:none; }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/5dde46dfad68e613.data_sdk.js" type="text/javascript" integrity="sha512-ds/RqriAoEl0AtU73yI0KEG7I3w5gFrGTkm0gjM9Ei1C8gDbW59oebDjI/sMTyHgMcthnpIwyXvauJgAgn9OMg=="></script>
+  <script src="/_sdk/05ccb5a43e5da88c.editing_sdk.js" type="text/javascript" integrity="sha512-FG1JRTGLHBjGwSq9y04ZmvkRvH245Ed36cKu7nnxxflQ7rhXj0x+4IVTVXVcLTY+FAKRl9u95V461lUElEGzSA=="></script>
+  <script src="/_sdk/9d038e0e9ed778bc.resizing_sdk.js" type="text/javascript" integrity="sha512-a2stsu3kAYCOVptOQlkOiHM6bvBjBd6B0Eo/fPK1VujUlbgoSkaiBVC4ZHqy7qvqKNe3TfH84LJRyu9MyXIlFQ=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full" style="background: rgb(245, 247, 251);">
+  <section id="login-screen" class="screen relative flex w-full items-center justify-center overflow-hidden px-4 py-8">
+   <div class="login-orb absolute -left-24 -top-24 h-80 w-80 rounded-full"></div>
+   <div class="login-orb absolute -bottom-32 -right-20 h-[28rem] w-[28rem] rounded-full"></div>
+   <main class="relative z-10 grid w-full max-w-5xl overflow-hidden rounded-3xl bg-white shadow-2xl shadow-slate-900/10 md:grid-cols-[1.05fr_.95fr]">
+    <section data-template-id="login-brand-panel" class="canva-panel flex min-h-[300px] flex-col justify-between bg-[#0A1F44] p-8 text-white md:min-h-[560px] md:p-12" style="background: rgb(10, 31, 68);">
+     <div>
+      <div class="mb-10 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/30 bg-white/10"><i data-lucide="graduation-cap" class="h-7 w-7"></i>
+      </div>
+      <p data-template-id="login-overline" class="canva-text mb-3 text-xs font-bold uppercase tracking-[.18em] text-blue-200" style="color: rgb(191, 219, 254); font-weight: 700; font-style: normal; font-size: 12px;">Portal Akademik Sekolah</p>
+      <h1 data-template-id="login-school-name" class="canva-text max-w-sm text-3xl font-extrabold leading-tight" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 30px;">SMAN 5 TIDORE KEPULAUAN</h1>
+      <p data-template-id="login-subtitle" class="canva-text mt-4 max-w-sm leading-relaxed text-blue-100" style="color: rgb(219, 234, 254); font-weight: 400; font-style: normal; font-size: 16px;">Sistem Absensi Digital yang praktis untuk memantau kehadiran warga sekolah.</p>
+     </div>
+     <p data-template-id="login-brand-footer" class="canva-text mt-10 text-sm text-blue-100" style="color: rgb(191, 219, 254); font-weight: 400; font-style: italic; font-size: 14px;">Hadir tepat waktu, belajar lebih bermakna.</p>
+    </section>
+    <section class="flex items-center p-7 md:p-12">
+     <div class="w-full">
+      <p data-template-id="login-welcome" class="canva-text text-sm font-semibold text-[#0A1F44]" style="color: rgb(10, 31, 68); font-weight: 700; font-style: normal; font-size: 13px;">AKSES DEMO</p>
+      <h2 data-template-id="login-title" class="canva-text mt-2 text-2xl font-extrabold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 800; font-style: normal; font-size: 23px;">Masuk ke Sistem</h2>
+      <p data-template-id="login-description" class="canva-text mt-2 text-sm leading-relaxed text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Masukkan identitas demo Anda untuk membuka dashboard sesuai peran.</p>
+      <form id="login-form" class="mt-7 space-y-5" novalidate="">
+       <div><label data-template-id="identity-label" class="canva-text mb-2 block text-sm font-semibold text-slate-700" for="identity-input" style="color: rgb(51, 65, 85); font-weight: 600; font-style: normal; font-size: 14px;">NISN atau NIP</label>
+        <div class="relative"><i data-lucide="id-card" class="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"></i> <input id="identity-input" type="text" autocomplete="off" class="w-full rounded-xl border border-slate-300 bg-white py-3.5 pl-12 pr-4 text-slate-800 placeholder:text-slate-400" aria-describedby="login-error">
+        </div>
+       </div><button data-template-id="login-button" class="canva-button flex w-full items-center justify-center gap-2 rounded-xl bg-[#0A1F44] px-4 py-3.5 font-bold text-white transition hover:bg-[#123369]" type="submit" style="background: rgb(10, 31, 68); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 15px;">Masuk Demo</button>
+       <p id="login-error" class="min-h-5 text-sm font-medium text-red-600" aria-live="polite"></p>
+      </form>
+      <aside data-template-id="demo-card" class="canva-card mt-7 rounded-xl border border-blue-100 bg-blue-50 p-4" style="background: rgb(239, 246, 255);">
+       <div class="flex gap-3"><i data-lucide="circle-help" class="mt-0.5 h-5 w-5 shrink-0 text-[#0A1F44]"></i>
+        <div>
+         <h3 data-template-id="demo-title" class="canva-text text-sm font-bold text-[#0A1F44]" style="color: rgb(10, 31, 68); font-weight: 700; font-style: normal; font-size: 14px;">Gunakan identitas demo</h3>
+         <p data-template-id="demo-student" class="canva-text mt-1 text-sm text-slate-600" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 14px;">Siswa: NISN 2026001</p>
+         <p data-template-id="demo-teacher" class="canva-text mt-1 text-sm text-slate-600" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 14px;">Guru: NIP 198501012010011001</p>
+        </div>
+       </div>
+      </aside>
+     </div>
+    </section>
+   </main>
+  </section>
+  <div id="app-screen" class="app-shell hidden w-full">
+   <aside class="sidebar fixed inset-y-0 left-0 z-30 flex flex-col p-4">
+    <div class="mb-8 px-3 pt-3">
+     <div class="flex items-center gap-3">
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[#0A1F44]">
+       <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+      </div>
+      <div>
+       <p data-template-id="sidebar-school-short" class="canva-text text-xs font-bold tracking-wide text-white" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 12px;">SMAN 5 TIDORE</p>
+       <p data-template-id="sidebar-system-label" class="canva-text mt-0.5 text-xs text-blue-200" style="color: rgb(191, 219, 254); font-weight: 400; font-style: normal; font-size: 12px;">Absensi Digital</p>
+      </div>
+     </div>
+    </div>
+    <nav aria-label="Navigasi utama" class="space-y-1"><button data-nav="dashboard" data-template-id="nav-dashboard" class="nav-item canva-button active flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold" type="button" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 15px;">Dashboard</button> <button data-nav="recap" data-template-id="nav-recap" class="nav-item canva-button flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold" type="button" style="color: rgb(191, 219, 254); font-weight: 600; font-style: normal; font-size: 15px;">Rekap Absensi</button> <button data-nav="manual" data-template-id="nav-manual" id="manual-nav" class="nav-item canva-button flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold" type="button" style="color: rgb(191, 219, 254); font-weight: 600; font-style: normal; font-size: 15px;">Input Manual</button> <button data-nav="profile" data-template-id="nav-profile" class="nav-item canva-button flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold" type="button" style="color: rgb(191, 219, 254); font-weight: 600; font-style: normal; font-size: 15px;">Profil</button>
+    </nav><button id="logout-button" data-template-id="nav-logout" class="nav-item canva-button mt-auto flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold" type="button" style="color: rgb(191, 219, 254); font-weight: 600; font-style: normal; font-size: 15px;">Keluar</button>
+   </aside>
+   <main class="content-area ml-0 md:ml-[248px]">
+    <header class="header-meta flex min-h-[84px] items-center justify-between border-b border-slate-200 bg-white px-4 py-4 md:px-8">
+     <div>
+      <p data-template-id="header-school-name" class="canva-text text-xs font-bold uppercase tracking-[.12em] text-[#0A1F44]" style="color: rgb(10, 31, 68); font-weight: 700; font-style: normal; font-size: 12px;">SMAN 5 TIDORE KEPULAUAN</p>
+      <h1 id="header-user-name" class="mt-1 text-xl font-extrabold text-slate-900"></h1>
+      <p id="header-user-detail" class="mt-1 text-sm text-slate-500"></p>
+     </div>
+     <div class="flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-2.5 text-[#0A1F44]"><i data-lucide="clock-3" class="h-5 w-5"></i>
+      <div>
+       <p data-template-id="clock-label" class="canva-text text-[10px] font-bold uppercase tracking-wider text-slate-500" style="color: rgb(100, 116, 139); font-weight: 700; font-style: normal; font-size: 10px;">Waktu Sekarang</p><time id="live-clock" class="text-sm font-bold"></time>
+      </div>
+     </div>
+    </header>
+    <div class="page-pad p-4 md:p-8">
+     <section id="view-dashboard" class="view active">
+      <div class="mb-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+       <div>
+        <p data-template-id="dashboard-eyebrow" class="canva-text text-sm font-bold text-[#0A1F44]" style="color: rgb(10, 31, 68); font-weight: 700; font-style: normal; font-size: 13px;">RINGKASAN HARI INI</p>
+        <h2 data-template-id="dashboard-title" class="canva-text mt-1 text-2xl font-extrabold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 800; font-style: normal; font-size: 23px;">Dashboard Absensi</h2>
+        <p data-template-id="dashboard-description" class="canva-text mt-1 text-sm text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Catat kehadiran dan pantau riwayat absensi Anda.</p>
+       </div><span id="today-date" class="text-sm font-semibold text-slate-500"></span>
+      </div>
+      <div class="grid gap-5 lg:grid-cols-[1.15fr_.85fr]">
+       <section data-template-id="attendance-action-card" class="canva-card card rounded-2xl p-5 md:p-6" style="background: rgb(255, 255, 255);">
+        <div class="flex items-start justify-between gap-4">
+         <div>
+          <h3 data-template-id="attendance-action-title" class="canva-text text-lg font-bold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 18px;">Absensi Hari Ini</h3>
+          <p data-template-id="attendance-action-copy" class="canva-text mt-1 text-sm text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Pastikan kehadiran Anda tercatat dengan benar.</p>
+         </div>
+         <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#0A1F44]">
+          <i data-lucide="scan-face" class="h-6 w-6"></i>
+         </div>
+        </div>
+        <div class="mt-6 grid gap-3 sm:grid-cols-2"><button id="checkin-button" data-template-id="checkin-button" class="canva-button flex items-center justify-center gap-2 rounded-xl bg-[#0A1F44] px-4 py-4 font-bold text-white transition hover:bg-[#123369]" type="button" style="background: rgb(10, 31, 68); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 15px;">Absen Masuk</button> <button id="checkout-button" data-template-id="checkout-button" class="canva-button flex items-center justify-center gap-2 rounded-xl border border-[#0A1F44] bg-white px-4 py-4 font-bold text-[#0A1F44] transition hover:bg-blue-50" type="button" style="background: rgb(255, 255, 255); color: rgb(10, 31, 68); font-weight: 700; font-style: normal; font-size: 15px;">Absen Pulang</button>
+        </div>
+        <p id="attendance-feedback" class="mt-4 min-h-5 text-sm font-medium text-slate-500" aria-live="polite"></p>
+       </section>
+       <section data-template-id="today-status-card" class="canva-card card rounded-2xl p-5 md:p-6" style="background: rgb(255, 255, 255);">
+        <p data-template-id="today-status-label" class="canva-text text-sm font-bold text-slate-500" style="color: rgb(100, 116, 139); font-weight: 700; font-style: normal; font-size: 13px;">STATUS KEHADIRAN HARI INI</p>
+        <div class="mt-4 flex items-center justify-between gap-3">
+         <div>
+          <p id="today-status-text" class="text-2xl font-extrabold text-slate-900"></p>
+          <p id="today-status-detail" class="mt-2 text-sm text-slate-500"></p>
+         </div><span id="today-status-badge" class="badge hadir">Hadir</span>
+        </div>
+        <div class="mt-6 h-2 overflow-hidden rounded-full bg-slate-100">
+         <div id="attendance-progress" class="h-full w-0 rounded-full bg-[#0A1F44] transition-all duration-500"></div>
+        </div>
+       </section>
+      </div>
+      <div class="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
+       <article class="card stat-card rounded-2xl p-5">
+        <div class="flex items-center justify-between">
+         <p data-template-id="stat-hadir-label" class="canva-text text-sm font-semibold text-slate-500" style="color: rgb(100, 116, 139); font-weight: 600; font-style: normal; font-size: 14px;">Total Hadir</p><i data-lucide="circle-check-big" class="h-5 w-5 text-green-600"></i>
+        </div>
+        <p id="stat-hadir" class="mt-4 text-3xl font-extrabold text-slate-900"></p>
+       </article>
+       <article class="card stat-card rounded-2xl p-5">
+        <div class="flex items-center justify-between">
+         <p data-template-id="stat-izin-label" class="canva-text text-sm font-semibold text-slate-500" style="color: rgb(100, 116, 139); font-weight: 600; font-style: normal; font-size: 14px;">Izin</p><i data-lucide="calendar-clock" class="h-5 w-5 text-yellow-600"></i>
+        </div>
+        <p id="stat-izin" class="mt-4 text-3xl font-extrabold text-slate-900"></p>
+       </article>
+       <article class="card stat-card rounded-2xl p-5">
+        <div class="flex items-center justify-between">
+         <p data-template-id="stat-sakit-label" class="canva-text text-sm font-semibold text-slate-500" style="color: rgb(100, 116, 139); font-weight: 600; font-style: normal; font-size: 14px;">Sakit</p><i data-lucide="stethoscope" class="h-5 w-5 text-orange-600"></i>
+        </div>
+        <p id="stat-sakit" class="mt-4 text-3xl font-extrabold text-slate-900"></p>
+       </article>
+       <article class="card stat-card rounded-2xl p-5">
+        <div class="flex items-center justify-between">
+         <p data-template-id="stat-alpa-label" class="canva-text text-sm font-semibold text-slate-500" style="color: rgb(100, 116, 139); font-weight: 600; font-style: normal; font-size: 14px;">Alpa</p><i data-lucide="circle-x" class="h-5 w-5 text-red-600"></i>
+        </div>
+        <p id="stat-alpa" class="mt-4 text-3xl font-extrabold text-slate-900"></p>
+       </article>
+      </div>
+      <section class="card mt-6 rounded-2xl">
+       <div class="flex items-center justify-between gap-4 border-b border-slate-100 p-5">
+        <div>
+         <h3 data-template-id="recent-title" class="canva-text font-bold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 18px;">Aktivitas Terbaru</h3>
+         <p data-template-id="recent-copy" class="canva-text mt-1 text-sm text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Tiga riwayat absensi terakhir Anda.</p>
+        </div><button data-nav="recap" data-template-id="view-recap-button" class="canva-button text-sm font-bold text-[#0A1F44] hover:underline" type="button" style="color: rgb(10, 31, 68); font-weight: 700; font-style: normal; font-size: 14px;">Lihat Rekap</button>
+       </div>
+       <div id="recent-list" class="divide-y divide-slate-100"></div>
+      </section>
+     </section>
+     <section id="view-recap" class="view">
+      <div class="mb-6">
+       <p data-template-id="recap-eyebrow" class="canva-text text-sm font-bold text-[#0A1F44]" style="color: rgb(10, 31, 68); font-weight: 700; font-style: normal; font-size: 13px;">DATA KEHADIRAN</p>
+       <h2 id="recap-heading" data-template-id="recap-title" class="canva-text mt-1 text-2xl font-extrabold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 800; font-style: normal; font-size: 23px;">Rekap Absensi</h2>
+       <p id="recap-description" data-template-id="recap-description" class="canva-text mt-1 text-sm text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Riwayat kehadiran Anda.</p>
+      </div>
+      <section class="card rounded-2xl">
+       <div class="border-b border-slate-100 p-5">
+        <div id="student-filters" class="grid gap-3 md:grid-cols-3">
+         <div>
+          <label data-template-id="month-filter-label" class="canva-text mb-1.5 block text-xs font-bold text-slate-600" for="month-filter" style="color: rgb(71, 85, 105); font-weight: 700; font-style: normal; font-size: 12px;">Filter Bulan</label><select id="month-filter" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm"></select>
+         </div>
+         <div>
+          <label data-template-id="status-filter-label" class="canva-text mb-1.5 block text-xs font-bold text-slate-600" for="status-filter" style="color: rgb(71, 85, 105); font-weight: 700; font-style: normal; font-size: 12px;">Filter Status</label><select id="status-filter" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm"></select>
+         </div>
+         <div>
+          <label data-template-id="sort-filter-label" class="canva-text mb-1.5 block text-xs font-bold text-slate-600" for="sort-filter" style="color: rgb(71, 85, 105); font-weight: 700; font-style: normal; font-size: 12px;">Urutkan</label><select id="sort-filter" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm"></select>
+         </div>
+        </div>
+        <div id="teacher-filters" class="hidden grid gap-3 md:grid-cols-4">
+         <div>
+          <label data-template-id="class-filter-label" class="canva-text mb-1.5 block text-xs font-bold text-slate-600" for="class-filter" style="color: rgb(71, 85, 105); font-weight: 700; font-style: normal; font-size: 12px;">Pilih Kelas</label><select id="class-filter" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm"></select>
+         </div>
+         <div>
+          <label data-template-id="date-filter-label" class="canva-text mb-1.5 block text-xs font-bold text-slate-600" for="date-filter" style="color: rgb(71, 85, 105); font-weight: 700; font-style: normal; font-size: 12px;">Filter Tanggal</label><input id="date-filter" type="date" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm">
+         </div>
+         <div>
+          <label data-template-id="teacher-status-filter-label" class="canva-text mb-1.5 block text-xs font-bold text-slate-600" for="teacher-status-filter" style="color: rgb(71, 85, 105); font-weight: 700; font-style: normal; font-size: 12px;">Filter Status</label><select id="teacher-status-filter" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm"></select>
+         </div>
+         <div>
+          <label data-template-id="teacher-sort-filter-label" class="canva-text mb-1.5 block text-xs font-bold text-slate-600" for="teacher-sort-filter" style="color: rgb(71, 85, 105); font-weight: 700; font-style: normal; font-size: 12px;">Urutkan</label><select id="teacher-sort-filter" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm"></select>
+         </div>
+        </div>
+       </div>
+       <div class="table-wrap">
+        <table>
+         <thead id="recap-table-head"></thead>
+         <tbody id="recap-table-body"></tbody>
+        </table>
+       </div>
+       <div id="recap-empty" class="hidden p-10 text-center"><i data-lucide="inbox" class="mx-auto h-8 w-8 text-slate-300"></i>
+        <p data-template-id="empty-recap-title" class="canva-text mt-3 font-bold text-slate-600" style="color: rgb(71, 85, 105); font-weight: 700; font-style: normal; font-size: 15px;">Belum ada data</p>
+        <p data-template-id="empty-recap-copy" class="canva-text mt-1 text-sm text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Ubah filter atau tambahkan data kehadiran terlebih dahulu.</p>
+       </div>
+      </section>
+     </section>
+     <section id="view-manual" class="view">
+      <div class="mb-6">
+       <p data-template-id="manual-eyebrow" class="canva-text text-sm font-bold text-[#0A1F44]" style="color: rgb(10, 31, 68); font-weight: 700; font-style: normal; font-size: 13px;">KHUSUS GURU</p>
+       <h2 data-template-id="manual-title" class="canva-text mt-1 text-2xl font-extrabold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 800; font-style: normal; font-size: 23px;">Input Status Kehadiran</h2>
+       <p data-template-id="manual-description" class="canva-text mt-1 text-sm text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Perbarui status siswa yang tidak melakukan absensi mandiri.</p>
+      </div>
+      <section data-template-id="manual-form-card" class="canva-card card max-w-3xl rounded-2xl p-5 md:p-7" style="background: rgb(255, 255, 255);">
+       <form id="manual-form" class="grid gap-5 md:grid-cols-2">
+        <div>
+         <label data-template-id="manual-class-label" class="canva-text mb-2 block text-sm font-semibold text-slate-700" for="manual-class" style="color: rgb(51, 65, 85); font-weight: 600; font-style: normal; font-size: 14px;">Kelas</label><select id="manual-class" class="w-full rounded-xl border border-slate-300 px-3 py-3"></select>
+        </div>
+        <div>
+         <label data-template-id="manual-student-label" class="canva-text mb-2 block text-sm font-semibold text-slate-700" for="manual-student" style="color: rgb(51, 65, 85); font-weight: 600; font-style: normal; font-size: 14px;">Pilih Siswa</label><select id="manual-student" class="w-full rounded-xl border border-slate-300 px-3 py-3"></select>
+        </div>
+        <div>
+         <label data-template-id="manual-status-label" class="canva-text mb-2 block text-sm font-semibold text-slate-700" for="manual-status" style="color: rgb(51, 65, 85); font-weight: 600; font-style: normal; font-size: 14px;">Status Kehadiran</label><select id="manual-status" class="w-full rounded-xl border border-slate-300 px-3 py-3"></select>
+        </div>
+        <div>
+         <label data-template-id="manual-date-label" class="canva-text mb-2 block text-sm font-semibold text-slate-700" for="manual-date" style="color: rgb(51, 65, 85); font-weight: 600; font-style: normal; font-size: 14px;">Tanggal</label><input id="manual-date" type="date" class="w-full rounded-xl border border-slate-300 px-3 py-3">
+        </div>
+        <div class="md:col-span-2">
+         <label data-template-id="manual-note-label" class="canva-text mb-2 block text-sm font-semibold text-slate-700" for="manual-note" style="color: rgb(51, 65, 85); font-weight: 600; font-style: normal; font-size: 14px;">Catatan (opsional)</label><textarea id="manual-note" rows="3" class="w-full resize-none rounded-xl border border-slate-300 px-3 py-3"></textarea>
+        </div>
+        <div class="md:col-span-2 flex items-center justify-between gap-4">
+         <p id="manual-feedback" class="text-sm font-medium text-slate-500" aria-live="polite"></p><button data-template-id="manual-save-button" class="canva-button inline-flex items-center gap-2 rounded-xl bg-[#0A1F44] px-5 py-3 font-bold text-white hover:bg-[#123369]" type="submit" style="background: rgb(10, 31, 68); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 15px;">Simpan Status</button>
+        </div>
+       </form>
+      </section>
+     </section>
+     <section id="view-profile" class="view">
+      <div class="mb-6">
+       <p data-template-id="profile-eyebrow" class="canva-text text-sm font-bold text-[#0A1F44]" style="color: rgb(10, 31, 68); font-weight: 700; font-style: normal; font-size: 13px;">AKUN SAYA</p>
+       <h2 data-template-id="profile-title" class="canva-text mt-1 text-2xl font-extrabold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 800; font-style: normal; font-size: 23px;">Profil Pengguna</h2>
+      </div>
+      <section data-template-id="profile-card" class="canva-card card max-w-2xl rounded-2xl p-6" style="background: rgb(255, 255, 255);">
+       <div class="flex items-center gap-4">
+        <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-[#0A1F44]">
+         <i data-lucide="user-round" class="h-8 w-8"></i>
+        </div>
+        <div>
+         <h3 id="profile-name" class="text-xl font-extrabold text-slate-900"></h3>
+         <p id="profile-role" class="mt-1 text-sm text-slate-500"></p>
+        </div>
+       </div>
+       <dl id="profile-details" class="mt-7 grid gap-4 border-t border-slate-100 pt-6 sm:grid-cols-2"></dl>
+      </section>
+     </section>
+    </div>
+   </main>
+   <nav class="mobile-nav fixed inset-x-0 bottom-0 z-40 justify-around border-t border-slate-200 bg-white px-2 py-2 shadow-[0_-8px_20px_rgba(10,31,68,.08)]" aria-label="Navigasi mobile"><button data-nav="dashboard" class="mobile-item flex flex-col items-center gap-1 rounded-lg px-3 py-1 text-xs font-semibold text-[#0A1F44]" type="button"><i data-lucide="layout-dashboard" class="h-5 w-5"></i><span>Beranda</span></button> <button data-nav="recap" class="mobile-item flex flex-col items-center gap-1 rounded-lg px-3 py-1 text-xs font-semibold text-slate-500" type="button"><i data-lucide="clipboard-list" class="h-5 w-5"></i><span>Rekap</span></button> <button data-nav="manual" id="mobile-manual-nav" class="mobile-item flex flex-col items-center gap-1 rounded-lg px-3 py-1 text-xs font-semibold text-slate-500" type="button"><i data-lucide="file-pen-line" class="h-5 w-5"></i><span>Manual</span></button> <button data-nav="profile" class="mobile-item flex flex-col items-center gap-1 rounded-lg px-3 py-1 text-xs font-semibold text-slate-500" type="button"><i data-lucide="user-round" class="h-5 w-5"></i><span>Profil</span></button>
+   </nav>
+  </div>
+  <div id="toast" class="toast fixed bottom-6 right-4 z-50 flex max-w-sm items-center gap-3 rounded-xl bg-[#0A1F44] px-4 py-3 text-sm font-semibold text-white shadow-xl" role="status" aria-live="polite"><i data-lucide="circle-check-big" class="h-5 w-5 text-green-300"></i><span id="toast-message"></span>
+  </div>
+  <script>
+    const users = {
+      "2026001": { role:"siswa", name:"Aulia Rahman", nisn:"2026001", className:"XII IPA 1" },
+      "198501012010011001": { role:"guru", name:"Bapak Ahmad Faisal, S.Pd.", nip:"198501012010011001", subject:"Matematika", className:"XII IPA 1 & XII IPA 2" }
+    };
+    const students = [
+      { name:"Aulia Rahman", nisn:"2026001", className:"XII IPA 1" },
+      { name:"Nuraini Lestari", nisn:"2026002", className:"XII IPA 1" },
+      { name:"Fikri Maulana", nisn:"2026003", className:"XII IPA 1" },
+      { name:"Salsabila Putri", nisn:"2026004", className:"XII IPA 1" },
+      { name:"Rizky Ananda", nisn:"2026010", className:"XII IPA 2" },
+      { name:"Miftahul Jannah", nisn:"2026011", className:"XII IPA 2" }
+    ];
+    const todayISO = new Date().toISOString().slice(0,10);
+    let currentUser = null;
+    let activeView = "dashboard";
+    let attendance = [
+      { owner:"2026001", date:"2026-09-21", in:"07.02", out:"15.04", status:"Hadir", note:"" },
+      { owner:"2026001", date:"2026-09-20", in:"07.08", out:"15.01", status:"Hadir", note:"" },
+      { owner:"2026001", date:"2026-09-19", in:"", out:"", status:"Izin", note:"Acara keluarga" },
+      { owner:"2026001", date:"2026-09-18", in:"", out:"", status:"Sakit", note:"" },
+      { owner:"2026001", date:"2026-09-17", in:"07.05", out:"15.10", status:"Hadir", note:"" },
+      { owner:"2026002", date:todayISO, in:"07.06", out:"", status:"Hadir", note:"" },
+      { owner:"2026003", date:todayISO, in:"", out:"", status:"Izin", note:"Izin keluarga" },
+      { owner:"2026004", date:todayISO, in:"", out:"", status:"Alpa", note:"" },
+      { owner:"2026010", date:todayISO, in:"07.10", out:"", status:"Hadir", note:"" },
+      { owner:"2026011", date:todayISO, in:"", out:"", status:"Sakit", note:"" },
+      { owner:"198501012010011001", date:"2026-09-21", in:"06.48", out:"15.20", status:"Hadir", note:"" },
+      { owner:"198501012010011001", date:"2026-09-20", in:"06.51", out:"15.13", status:"Hadir", note:"" },
+      { owner:"198501012010011001", date:"2026-09-19", in:"06.55", out:"15.18", status:"Hadir", note:"" }
+    ];
+
+    const statusClass = (status) => ({Hadir:"hadir", Izin:"izin", Sakit:"sakit", Alpa:"alpa"}[status] || "hadir");
+    const formatDate = (date) => new Intl.DateTimeFormat("id-ID",{day:"2-digit",month:"long",year:"numeric"}).format(new Date(date+"T12:00:00"));
+    const shortDate = (date) => new Intl.DateTimeFormat("id-ID",{day:"2-digit",month:"short"}).format(new Date(date+"T12:00:00"));
+    const timeNow = () => new Intl.DateTimeFormat("id-ID",{hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date()).replace(":", ".");
+
+    function showToast(message) {
+      document.getElementById("toast-message").textContent = message;
+      const toast = document.getElementById("toast");
+      toast.classList.add("show");
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => toast.classList.remove("show"), 3500);
+    }
+
+    function updateClock() {
+      const now = new Date();
+      document.getElementById("live-clock").textContent = new Intl.DateTimeFormat("id-ID",{hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).format(now);
+      document.getElementById("today-date").textContent = new Intl.DateTimeFormat("id-ID",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(now);
+    }
+
+    function entriesFor(id) { return attendance.filter(item => item.owner === id); }
+    function todayEntry(id) { return attendance.find(item => item.owner === id && item.date === todayISO); }
+
+    function renderHeader() {
+      const detail = currentUser.role === "siswa" ? `${currentUser.className} · NISN ${currentUser.nisn}` : `${currentUser.subject} · ${currentUser.className}`;
+      document.getElementById("header-user-name").textContent = currentUser.name;
+      document.getElementById("header-user-detail").textContent = detail;
+      document.getElementById("manual-nav").classList.toggle("hidden", currentUser.role !== "guru");
+      document.getElementById("mobile-manual-nav").classList.toggle("hidden", currentUser.role !== "guru");
+    }
+
+    function renderDashboard() {
+      const id = currentUser.role === "siswa" ? currentUser.nisn : currentUser.nip;
+      const entry = todayEntry(id);
+      const checkin = document.getElementById("checkin-button");
+      const checkout = document.getElementById("checkout-button");
+      const feedback = document.getElementById("attendance-feedback");
+      checkin.disabled = Boolean(entry?.in);
+      checkout.disabled = !entry?.in || Boolean(entry?.out);
+      checkin.classList.toggle("opacity-50", checkin.disabled);
+      checkout.classList.toggle("opacity-50", checkout.disabled);
+      checkin.classList.toggle("cursor-not-allowed", checkin.disabled);
+      checkout.classList.toggle("cursor-not-allowed", checkout.disabled);
+
+      if (!entry) {
+        document.getElementById("today-status-text").textContent = "Belum tercatat";
+        document.getElementById("today-status-detail").textContent = "Silakan lakukan absensi masuk.";
+        document.getElementById("today-status-badge").textContent = "Menunggu";
+        document.getElementById("today-status-badge").className = "badge izin";
+        document.getElementById("attendance-progress").style.width = "0%";
+        feedback.textContent = "";
+      } else {
+        document.getElementById("today-status-text").textContent = entry.status;
+        document.getElementById("today-status-detail").textContent = entry.in ? `Masuk ${entry.in}${entry.out ? " · Pulang "+entry.out : ""}` : (entry.note || "Status diperbarui manual");
+        const badge = document.getElementById("today-status-badge");
+        badge.textContent = entry.status; badge.className = `badge ${statusClass(entry.status)}`;
+        document.getElementById("attendance-progress").style.width = entry.out ? "100%" : entry.in ? "55%" : "100%";
+        feedback.textContent = entry.out ? "Absensi hari ini sudah lengkap." : entry.in ? "Absensi masuk sudah tercatat." : "Status kehadiran telah diperbarui.";
+      }
+
+      const stats = {Hadir:0,Izin:0,Sakit:0,Alpa:0};
+      entriesFor(id).forEach(item => stats[item.status]++);
+      document.getElementById("stat-hadir").textContent = stats.Hadir;
+      document.getElementById("stat-izin").textContent = stats.Izin;
+      document.getElementById("stat-sakit").textContent = stats.Sakit;
+      document.getElementById("stat-alpa").textContent = stats.Alpa;
+
+      const recent = entriesFor(id).sort((a,b) => b.date.localeCompare(a.date)).slice(0,3);
+      document.getElementById("recent-list").innerHTML = recent.length ? recent.map(item => `
+        <div class="flex items-center justify-between gap-3 px-5 py-4">
+          <div><p class="font-semibold text-slate-800">${formatDate(item.date)}</p><p class="mt-1 text-sm text-slate-500">${item.in ? "Masuk "+item.in : "Belum ada jam masuk"}${item.out ? " · Pulang "+item.out : ""}</p></div>
+          <span class="badge ${statusClass(item.status)}">${item.status}</span>
+        </div>`).join("") : `<div class="p-8 text-center text-sm text-slate-500">Belum ada riwayat absensi.</div>`;
+    }
+
+    function fillSelects() {
+      const statuses = `<option value="">Semua status</option><option>Hadir</option><option>Izin</option><option>Sakit</option><option>Alpa</option>`;
+      document.getElementById("status-filter").innerHTML = statuses;
+      document.getElementById("teacher-status-filter").innerHTML = statuses;
+      document.getElementById("month-filter").innerHTML = `<option value="">Semua bulan</option><option value="2026-09">September 2026</option>`;
+      document.getElementById("sort-filter").innerHTML = `<option value="date-desc">Tanggal terbaru</option><option value="date-asc">Tanggal terlama</option><option value="status">Status A–Z</option>`;
+      document.getElementById("teacher-sort-filter").innerHTML = `<option value="name">Nama A–Z</option><option value="date-desc">Tanggal terbaru</option><option value="status">Status A–Z</option>`;
+      const classes = [...new Set(students.map(s => s.className))];
+      document.getElementById("class-filter").innerHTML = classes.map(c=>`<option>${c}</option>`).join("");
+      document.getElementById("manual-class").innerHTML = classes.map(c=>`<option>${c}</option>`).join("");
+      document.getElementById("manual-status").innerHTML = `<option>Hadir</option><option>Izin</option><option>Sakit</option><option>Alpa</option>`;
+      document.getElementById("manual-date").value = todayISO;
+      renderManualStudents();
+    }
+
+    function renderManualStudents() {
+      const className = document.getElementById("manual-class").value;
+      document.getElementById("manual-student").innerHTML = students.filter(s=>s.className===className).map(s=>`<option value="${s.nisn}">${s.name} — ${s.nisn}</option>`).join("");
+    }
+
+    function renderRecap() {
+      const isTeacher = currentUser.role === "guru";
+      document.getElementById("student-filters").classList.toggle("hidden", isTeacher);
+      document.getElementById("teacher-filters").classList.toggle("hidden", !isTeacher);
+      document.getElementById("recap-heading").textContent = isTeacher ? "Rekap Absensi Siswa" : "Rekap Absensi";
+      document.getElementById("recap-description").textContent = isTeacher ? "Pantau kehadiran siswa pada kelas yang diampu." : "Riwayat kehadiran Anda.";
+      const head = document.getElementById("recap-table-head");
+      const body = document.getElementById("recap-table-body");
+      const empty = document.getElementById("recap-empty");
+      let rows = [];
+
+      if (!isTeacher) {
+        const month = document.getElementById("month-filter").value;
+        const status = document.getElementById("status-filter").value;
+        const sort = document.getElementById("sort-filter").value;
+        rows = entriesFor(currentUser.nisn).filter(r => (!month || r.date.startsWith(month)) && (!status || r.status === status));
+        rows.sort((a,b) => sort==="date-asc" ? a.date.localeCompare(b.date) : sort==="status" ? a.status.localeCompare(b.status) : b.date.localeCompare(a.date));
+        head.innerHTML = "<tr><th>Tanggal</th><th>Jam Masuk</th><th>Jam Pulang</th><th>Status</th></tr>";
+        body.innerHTML = rows.map(r=>`<tr><td class="font-semibold text-slate-700">${formatDate(r.date)}</td><td>${r.in||"—"}</td><td>${r.out||"—"}</td><td><span class="badge ${statusClass(r.status)}">${r.status}</span></td></tr>`).join("");
+      } else {
+        const className = document.getElementById("class-filter").value;
+        const date = document.getElementById("date-filter").value;
+        const status = document.getElementById("teacher-status-filter").value;
+        const sort = document.getElementById("teacher-sort-filter").value;
+        rows = attendance.filter(r => {
+          const student = students.find(s=>s.nisn===r.owner);
+          return student && student.className===className && (!date || r.date===date) && (!status || r.status===status);
+        }).map(r=>({...r, student:students.find(s=>s.nisn===r.owner)}));
+        rows.sort((a,b) => sort==="name" ? a.student.name.localeCompare(b.student.name) : sort==="status" ? a.status.localeCompare(b.status) : b.date.localeCompare(a.date));
+        head.innerHTML = "<tr><th>Nama</th><th>NISN</th><th>Tanggal</th><th>Masuk</th><th>Pulang</th><th>Status</th></tr>";
+        body.innerHTML = rows.map(r=>`<tr><td class="font-semibold text-slate-700">${r.student.name}</td><td>${r.student.nisn}</td><td>${shortDate(r.date)}</td><td>${r.in||"—"}</td><td>${r.out||"—"}</td><td><span class="badge ${statusClass(r.status)}">${r.status}</span></td></tr>`).join("");
+      }
+      empty.classList.toggle("hidden", rows.length !== 0);
+    }
+
+    function renderProfile() {
+      const details = currentUser.role === "siswa"
+        ? [["Peran","Siswa"],["NISN",currentUser.nisn],["Kelas",currentUser.className],["Status","Aktif"]]
+        : [["Peran","Guru"],["NIP",currentUser.nip],["Mata Pelajaran",currentUser.subject],["Kelas Diampu",currentUser.className]];
+      document.getElementById("profile-name").textContent = currentUser.name;
+      document.getElementById("profile-role").textContent = currentUser.role === "siswa" ? "Siswa aktif SMAN 5 Tidore Kepulauan" : "Guru aktif SMAN 5 Tidore Kepulauan";
+      document.getElementById("profile-details").innerHTML = details.map(d=>`<div><dt class="text-xs font-bold uppercase tracking-wide text-slate-400">${d[0]}</dt><dd class="mt-1 font-semibold text-slate-700">${d[1]}</dd></div>`).join("");
+    }
+
+    function changeView(view) {
+      if (view === "manual" && currentUser.role !== "guru") return;
+      activeView = view;
+      document.querySelectorAll(".view").forEach(el=>el.classList.toggle("active", el.id === "view-"+view));
+      document.querySelectorAll("[data-nav]").forEach(btn=>btn.classList.toggle("active", btn.dataset.nav === view));
+      document.querySelectorAll(".mobile-item").forEach(btn=>{
+        const active = btn.dataset.nav === view;
+        btn.classList.toggle("text-[#0A1F44]", active); btn.classList.toggle("text-slate-500", !active);
+      });
+      if (view==="recap") renderRecap();
+      if (view==="profile") renderProfile();
+    }
+
+    function recordAttendance(type) {
+      const id = currentUser.role === "siswa" ? currentUser.nisn : currentUser.nip;
+      let entry = todayEntry(id);
+      if (type === "in") {
+        if (entry?.in) return showToast("Absensi masuk sudah tercatat.");
+        if (!entry) { entry = {owner:id,date:todayISO,in:timeNow(),out:"",status:"Hadir",note:""}; attendance.push(entry); }
+        else { entry.in=timeNow(); entry.status="Hadir"; }
+        showToast("Absensi masuk berhasil dicatat.");
+      } else {
+        if (!entry?.in) return showToast("Silakan lakukan absensi masuk terlebih dahulu.");
+        if (entry.out) return showToast("Absensi pulang sudah tercatat.");
+        entry.out=timeNow(); showToast("Absensi pulang berhasil dicatat.");
+      }
+      renderDashboard(); if(activeView==="recap") renderRecap();
+    }
+
+    document.getElementById("login-form").addEventListener("submit", event => {
+      event.preventDefault();
+      const identity = document.getElementById("identity-input").value.trim();
+      const error = document.getElementById("login-error");
+      if (!identity) { error.textContent="Masukkan NISN atau NIP demo terlebih dahulu."; return; }
+      if (!users[identity]) { error.textContent="Identitas demo tidak ditemukan. Gunakan salah satu contoh yang tersedia."; return; }
+      error.textContent="";
+      currentUser = users[identity];
+      document.getElementById("login-screen").classList.add("hidden");
+      document.getElementById("app-screen").classList.remove("hidden");
+      renderHeader(); fillSelects(); renderDashboard(); changeView("dashboard");
+      showToast(`Selamat datang, ${currentUser.name}.`);
+    });
+
+    document.getElementById("checkin-button").addEventListener("click",()=>recordAttendance("in"));
+    document.getElementById("checkout-button").addEventListener("click",()=>recordAttendance("out"));
+    document.getElementById("logout-button").addEventListener("click",()=>{
+      currentUser=null; document.getElementById("app-screen").classList.add("hidden"); document.getElementById("login-screen").classList.remove("hidden");
+      document.getElementById("identity-input").value=""; showToast("Anda telah keluar dari sesi demo.");
+    });
+    document.querySelectorAll("[data-nav]").forEach(btn=>btn.addEventListener("click",()=>changeView(btn.dataset.nav)));
+    ["month-filter","status-filter","sort-filter","class-filter","date-filter","teacher-status-filter","teacher-sort-filter"].forEach(id=>document.getElementById(id).addEventListener("change",renderRecap));
+    document.getElementById("manual-class").addEventListener("change",renderManualStudents);
+    document.getElementById("manual-form").addEventListener("submit", event=>{
+      event.preventDefault();
+      const owner = document.getElementById("manual-student").value;
+      const status = document.getElementById("manual-status").value;
+      const date = document.getElementById("manual-date").value;
+      const note = document.getElementById("manual-note").value.trim();
+      const existing = attendance.find(r=>r.owner===owner && r.date===date);
+      if(existing) { existing.status=status; existing.note=note; if(status!=="Hadir"){existing.in="";existing.out="";} }
+      else attendance.push({owner,date,in:"",out:"",status,note});
+      document.getElementById("manual-feedback").textContent="Status kehadiran berhasil disimpan.";
+      document.getElementById("manual-note").value="";
+      showToast("Status kehadiran siswa berhasil diperbarui.");
+      renderRecap();
+    });
+
+    updateClock(); setInterval(updateClock,1000);
+    document.addEventListener("DOMContentLoaded",()=>lucide.createIcons());
+  </script>
+ 
+</body></html>
